@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# HTML5-MOVING-VUE
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**html5-moving-vue** is a tool for you moving in/out.
+You can simplely deploy this tools in your home pc or laptop, and using it on web browser in your mobile phones(Safari, Chrome).
+There is a server-side project named **moving** written in golang you can find it [here](https://github.com/alydnhrealgang/moving) and follow its instructs to deploy.
 
-## Recommended IDE Setup
+# Overview
+This moving application offers organizing your stuffs when you moving out and you will get information list of organized articles in each boxes.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Use the camera on mobile phone as a barcode scanner.
+- Easily to create/update/delete boxes and articles after a barcode scanned.
+- Easily moving articles from one box to another.
+- You will get a complete inventory of mainifests on each **boxes**.
