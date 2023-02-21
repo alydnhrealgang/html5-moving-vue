@@ -1,0 +1,54 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #eff2f5;
+}
+
+.van-form {
+    .van-uploader {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.van-form,
+.box-container,
+.article-container {
+    h2 {
+        color: #969799;
+        margin: 0;
+        padding: 15px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: left;
+    }
+}
+
+h2.center {
+    text-align: center;
+}
+
+.submit-container {
+    margin: 16px;
+}
+
+.box-container,
+.article-container {
+    width: 100%;
+    background-color: white;
+
+    .box-cell,
+    .article-cell {
+        background-color: #c8fac9;
+
+        .van-cell__title>span,
+        .van-cell__left-icon {
+            font-size: 23px
+        }
+    }
+}

@@ -1,0 +1,17 @@
+export default () => ({
+    scannedBarCodes: [],
+    routeTitle: "",
+    switchOnScanner: false,
+    processingWithServer: false,
+    switchOnScanner: false,
+    currentBox: {},
+    virtualBox: {},
+    previousBox: {},
+    initialised: false,
+    navRightActions: [],
+    articlesStack: [],
+    boxesStack: [],
+    unknownBarcodeHandlerStack: [],
+    previousRoute: {},
+    showScanButton: false,
+})
