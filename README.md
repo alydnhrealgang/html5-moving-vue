@@ -11,7 +11,6 @@ This moving application offers organizing your stuffs when you are moving out an
 - Easily to create/update/delete boxes and articles after a barcode scanned.
 - Easily moving articles from one box to another.
 - You will get a complete inventory of mainifests on each **boxes**.
-- 
 
 # Concepts
 The ideas of **moving** tools consists of 3 parts:
@@ -23,8 +22,34 @@ The ideas of **moving** tools consists of 3 parts:
 # Prepare for running
 You should do some preparation for your first running:
 
-- Due to the security reasons in your mobile browsers, if we'd like to invoke the camera function on HTML5 page, we should make an SSL root certificate and install in your mobile phone and set it up to your host server to provide an https website, you can follow up this article [How to Create Your Own SSL Certificate Authority for Local HTTPS Development](https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/#becoming-certificate-authority) to get it done.
+- Due to the security reasons in your mobile browsers, if we'd like to invoke the camera function on HTML5 page, we should make an SSL root certificate and install in your mobile phone and set it up to your host server to provide an https website, you can follow up this article [How to Create Your Own SSL Certificate Authority for Local HTTPS Development](https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/#becoming-certificate-authority) to get it done. After that you should put generated certification files to `/certs` folder, the default certification file names are `/certs/192.168.31.49.key` and `/certs/192.168.31.49.crt` and if the file name changes you could update them in [vite.config.js](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/vite.config.js).
+```js
+function sslPlugin() {
+  return {
+    name: "vite:ssl",
+    async configResolved(config) {
+      const https = () => ({
+        key: __dirname + "replace_to_key_file_path",
+        cert: __dirname + "replace_to_crt_file_path"
+      });
+      config.server.https = Object.assign({}, config.server.https, https());
+      config.preview.https = Object.assign({}, config.preview.https, https());
+    }
+  };
+}
+```
 - You should either print or buy barcode stickers with a size of 4cm x 8cm and a ratio of 1:2. Currently, the system only supports barcodes in the range of "689500001" to "689500999".
-> if you want **use difference size of barcode stickers** and in order to **ensure the quality of scanned result**, you can change `scanWidth` and `scanHeight` value in [QrCodeScanner.vue](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/src/components/QrCodeScanner.vue)
+> If you want **use difference size of barcode stickers** and in order to **ensure the quality of scanned result**, you can change `scanWidth` and `scanHeight` value in [QrCodeScanner.vue](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/src/components/QrCodeScanner.vue)
 
-> if you want **change the range of barcodes**, you can change the regex `VITE_BAR_CODE_REGEXP` in [.evn](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/.evn) file
+> If you want **change the range of barcodes**, you can change the regex `VITE_BAR_CODE_REGEXP` in [.evn](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/.evn) file
+- Before running the program, you should set up the moving server. 
+> The default API server URL is `https://192.168.31.49:8443/v1`, which is specified in the .env.production file. You should update this URL to the correct address for your moving server.
+
+# Run it
+**html5-moving-vue** is created by vue3 and could running wth vite.
+- For development environment, you can:
+```bash
+> cd html5-moving-vue
+> npm install # install all the dependencies for the project, run only once.
+> npm run dev
+```
