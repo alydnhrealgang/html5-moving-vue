@@ -53,23 +53,30 @@ function sslPlugin() {
 > npm install # install all the dependencies for the project, run only once.
 > npm run dev
 ```
+# Deploy
+```bash
+> cd html5-moving-vue
+> npm run build
+```
+The compiled codes are in `dist` folder, you can deploy it to IIS, NGINX, etc.
+please note that you should add SSL certification configuration to your web server. 
 
 # Photofilo
 
-![1](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/1.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/1.jpg?raw=true)
 
-![2](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/2.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/2.jpg?raw=true)
 
-![3](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/3.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/3.jpg?raw=true)
 
-![4](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/4.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/4.jpg?raw=true)
 
-![5](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/5.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/5.jpg?raw=true)
 
-![6](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/6.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/6.jpg?raw=true)
 
-![7](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/7.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/7.jpg?raw=true)
 
-![8](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/8.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/8.jpg?raw=true)
 
-![9](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/9.jpg?raw=true)
+![enter image description here](https://github.com/alydnhrealgang/html5-moving-vue/blob/main/portfolio/9.jpg?raw=true)

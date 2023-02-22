@@ -37,4 +37,16 @@ async function moveArticlesTo(store, article, box) {
     return true
 }
 
-export { moveArticlesFromVirtualBoxTo, moveArticlesTo }
+async function confirmSetCurrentBox(store, box) {
+    try {
+        await showConfirmDialog({
+            title: `Moving articles`,
+            message: `Would like to set box ${box.code} to this box?`,
+        })
+        store.commit("setCurrentBox", box)
+        return true
+    } catch { }
+    return false
+}
+
+export { moveArticlesFromVirtualBoxTo, moveArticlesTo, confirmSetCurrentBox }

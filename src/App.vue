@@ -6,7 +6,6 @@ import { useStore } from 'vuex';
 import QrCodeScanner from './components/QrCodeScanner.vue';
 import Draggable from './components/Draggable.vue';
 import _ from 'lodash'
-import state from './store/state';
 
 const router = useRouter();
 const route = useRoute();

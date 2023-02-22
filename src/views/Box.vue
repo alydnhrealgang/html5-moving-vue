@@ -20,7 +20,7 @@ import { onMounted, reactive, computed, watch, ref } from 'vue'
 import Box from '@/js/box';
 import { useStore } from 'vuex'
 import _ from 'lodash'
-import { moveArticlesFromVirtualBoxTo, moveArticlesTo } from '@/js/viewHelper'
+import { moveArticlesFromVirtualBoxTo, moveArticlesTo, confirmSetCurrentBox } from '@/js/viewHelper'
 
 const route = useRoute()
 const router = useRouter()
@@ -86,6 +86,10 @@ async function onSaveBox() {
         }
         if (await moveArticlesFromVirtualBoxTo(store, box)) {
             onPickup()
+            return
+        }
+        if (isNewBox && confirmSetCurrentBox(store, box)) {
+            router.replace({ name: 'home' })
             return
         }
         router.back()

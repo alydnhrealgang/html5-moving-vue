@@ -11,7 +11,8 @@
             <van-button v-if="store.state.currentBox.code !== article.boxCode" type="primary" round block
                 @click="onMove(store.state.currentBox)">Move to box {{ store.state.currentBox.code }}</van-button>
         </div>
-        <div class="submit-container" v-if="viewMode && !_.isEmpty(store.state.previousBox.code)">
+        <div class="submit-container"
+            v-if="viewMode && !_.isEmpty(store.state.previousBox.code) && store.state.previousBox.isVirtual">
             <van-button v-if="store.state.previousBox.code !== article.boxCode" type="primary" round block
                 @click="onMove(store.state.previousBox)">Move to box {{ store.state.previousBox.code }}</van-button>
         </div>
